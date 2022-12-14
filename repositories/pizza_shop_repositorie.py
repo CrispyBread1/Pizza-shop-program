@@ -4,7 +4,7 @@ from models.pizza import Pizza
 from models.pizza_shop import Pizza_shop
 
 def save(pizza_shop):
-    sql = "INSERT INTO pizzas (name) VALUES (%s) RETURNING *"
+    sql = "INSERT INTO pizza_shops (name) VALUES (%s) RETURNING *"
     values = [pizza_shop.name]
     results = run_sql(sql, values)
     id = results[0]['id']
@@ -21,3 +21,4 @@ def select_all():
         pizzas.append(pizza_shop)
 
     return pizzas
+

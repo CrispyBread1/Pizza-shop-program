@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+{% for pizza in all_pizzas %}
+<div>
+    <div>
+        {{pizza.pizza_shops.name}}
+        <div>
+            <a>{{pizza.name}}</a>
+            <span>{{pizza.toppings}}</span>
+
+        </div>
+        
+        <div>
+            <form action="pizza/{{pizza.id}}/delete" method="POST"><button>X</button></form>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+
+
+{% endblock %}
+
+
+
+
+

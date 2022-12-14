@@ -6,13 +6,11 @@ import repositories.pizza_repositorie as pizza_repository
 import repositories.pizza_shop_repositorie as pizza_shop_repository
 
 pizza_shop1 = Pizza_shop("You Want aPizza Me")
-pizza_shop2 = Pizza_shop("Pie Boy")
-
 pizza_shop_repository.save(pizza_shop1)
+pizza_shop2 = Pizza_shop("Pie Boy")
 pizza_shop_repository.save(pizza_shop2)
 
 pizza1 = Pizza("El Classico", "Pepperoni", pizza_shop1, "Burn your butt")
-pizza2 = Pizza("Hubba Bubba", "Hot Bacon",pizza_shop1, "Cunting Hot")
-
 pizza_repository.save(pizza1)
+pizza2 = Pizza("Hubba Bubba", "Hot Bacon",pizza_shop1, "Cunting Hot")
 pizza_repository.save(pizza2)

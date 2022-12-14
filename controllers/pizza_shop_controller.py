@@ -7,7 +7,7 @@ from repositories import pizza_shop_repositorie
 pizza_shop_blueprint = Blueprint("pizza_shop", __name__)
 
 @pizza_shop_blueprint.route("/pizza")
-def pizza_shop():
+def index():
     pizza_shop = pizza_shop_repositorie.select_all()
-    return render_template("pizzas/index.html", all_pizzas = pizza_shop)
+    return render_template("pizza/index.html", all_pizzas = pizza_shop)
 
