@@ -2,8 +2,8 @@ import pdb
 from models.pizza import Pizza
 from models.pizza_shop import Pizza_shop
 
-import repositories.pizza_repositorie as pizza_repository
-import repositories.pizza_shop_repositorie as pizza_shop_repository
+import repositories.pizza_repository as pizza_repository
+import repositories.pizza_shop_repository as pizza_shop_repository
 
 pizza_shop1 = Pizza_shop("You Want aPizza Me")
 pizza_shop_repository.save(pizza_shop1)

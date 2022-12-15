@@ -1,24 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
 
-
+<ul>
 {% for pizza in all_pizzas %}
 <div>
-    <div>
-        {{pizza.pizza_shops.name}}
+    
+        <li>{{ pizza.pizza_shop.name }}</li>
         <div>
-            <a>{{pizza.name}}</a>
-            <span>{{pizza.toppings}}</span>
-
+            {{ pizza.spice_lvl }}
+            {{ pizza.name }}
         </div>
+        
         
         <div>
             <form action="pizza/{{pizza.id}}/delete" method="POST"><button>X</button></form>
         </div>
-    </div>
+    
 </div>
 {% endfor %}
-
+</ul>
 
 
 {% endblock %}
